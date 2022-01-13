@@ -14,24 +14,28 @@
     <!-- block, element modifier: sự thay đổi cho element hoặc block -->
     <div class="app">
         <header class="header"> 
-                <!-- chứa navbar -->
+            <div class="grid">
                 <nav class="header__navbar">
                     <ul class="header__navbar-list">
-                        <lli class="header__navbar-item">vào cửa hàng trên ứng dụng shoppe</lli>
-                        <li class="header_navbar-item">Kết nối</li>
+                        <!-- separate: gạch phân cách -->
+                        <li class="header__navbar-item header__navbar-item--separate">vào cửa hàng trên ứng dụng shoppe</li>
+                        <li class="header__navbar-item">Kết nối</li>
                     </ul>
-
+    
                     <ul class="header__navbar-list">
-                        <li class="header_navbar-item">
+                        <li class="header__navbar-item">
                             <a href="" class="header__navbar-item-link">Thông báo</a>
                         </li>
-                        <li class="header_navbar-item">
+                        <li class="header__navbar-item">
                             <a href="" class="header__navbar-item-link">Trợ giúp</a>
                         </li>
-                        <li class="header_navbar-item">Đăng ký</li>
-                        <li class="header_navbar-item">Đăng nhập</li>
+                        <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">Đăng ký</li>
+                        <!-- strong:chữ in đậm -->
+                        <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li>
                     </ul>
                 </nav>
+            </div>
+                <!-- chứa navbar --> 
         </header>
 
         <div class="container">
