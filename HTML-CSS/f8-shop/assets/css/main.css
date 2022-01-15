@@ -14,9 +14,10 @@
     margin-top: 4px ;
 }
 
-.header__navbar-item {
+.header__navbar-item { /*thẻ li*/
     margin: 0 8px;
     position: relative;
+    min-height: 26px;
 }
 
 .header__navbar-item,
@@ -28,7 +29,16 @@
     font-weight: 300;
 }
 
-.header__navbar-item:hover, /*mờ chữ đi*/
+.header__navbar-item,
+.header__navbar-item-link,
+.header__navbar-icon-link {
+    display: inline-flex;
+    /*căn chữ "kết nối ra giữa thẳng với icon"*/
+    align-items: center;
+}
+
+.header__navbar-item:hover,
+.header__navbar-icon-link:hover, /*mờ chữ đi*/
 .header__navbar-item-link:hover {
     cursor: pointer; /*con trỏ chuột*/
     color: rgba(255, 255, 255, 0.7);
@@ -53,3 +63,37 @@
     color: var(--white-color); /*phủ màu trắng 2 icons*/
     text-decoration: none;
 }
+
+.header__navbar-icon {
+    font-size: 1.8rem;
+    margin: 0 4px; /*đẩy cách xa icon*/
+}
+
+.header__navbar-title--no-pointer {
+    cursor: text;
+    color: var(--white-color);
+}
+
+/* header QR code */
+
+.header__qr {
+    width: 186px;
+    background-color: var(--white-color);
+    position: absolute; /*tuyệt đối*/
+    left: 0;
+    top: 100%;
+    padding: 8px;
+    border-radius: 2px;
+}
+
+ .header__qr-img {
+     width: 100%;
+ }
+
+ .header__qr-apps {
+    display: flex; /*2 ảnh google và store ngang nhau*/
+ }
+
+ .header__qr-download-img {
+    height: 16px;
+ }
