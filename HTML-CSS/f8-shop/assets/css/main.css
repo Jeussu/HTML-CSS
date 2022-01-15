@@ -88,6 +88,7 @@
 
  .header__qr-img {
      width: 100%;
+
  }
 
  .header__qr-apps {
@@ -95,5 +96,5 @@
  }
 
  .header__qr-download-img {
-    height: 16px;
+    height: 17px;
  }
