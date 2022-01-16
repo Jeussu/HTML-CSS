@@ -37,3 +37,14 @@ html {
 /* p {
     font-size: 1.6rem; 1rem=16px
 } */
+
+/* Animatiton */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+} /*hiệu ứng hiện dần*/

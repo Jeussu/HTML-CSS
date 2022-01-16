@@ -20,6 +20,11 @@
     min-height: 26px;
 }
 
+.header__navbar-item--has-qr:hover .header__qr {
+    /* header__qr: là con của class đứng trước sau . */
+    display: block;
+}
+
 .header__navbar-item,
 .header__navbar-item-link {
     display: inline-block; /*giữ lại tính chất khối và nằm ngang trên cùng một hàng*/
@@ -81,9 +86,21 @@
     background-color: var(--white-color);
     position: absolute; /*tuyệt đối*/
     left: 0;
-    top: 100%;
+    top: 118%;
     padding: 8px;
     border-radius: 2px;
+    display: none;
+    animation: fadeIn ease-in 0.5s; /*chuyển động từ từ*/
+}
+
+.header__qr::before {
+    position: absolute;
+    left: 0;
+    top: -16px;
+    width: 100%;
+    height: 20px;
+    content: "";
+    display: block;
 }
 
  .header__qr-img {
@@ -93,8 +110,17 @@
 
  .header__qr-apps {
     display: flex; /*2 ảnh google và store ngang nhau*/
- }
+    justify-content: space-between;
+}
+
+.header__qr-link:nth-child(1) {
+    margin-left: 11px;
+}
+
+.header__qr-link:nth-child(2) {
+    margin-right: 11px;
+}
 
  .header__qr-download-img {
-    height: 17px;
+    height: 16px;
  }
