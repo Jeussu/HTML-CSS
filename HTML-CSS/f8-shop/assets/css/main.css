@@ -20,8 +20,13 @@
     min-height: 26px;
 }
 
+
 .header__navbar-item--has-qr:hover .header__qr {
     /* header__qr: là con của class đứng trước sau . */
+    display: block;
+}
+
+.header__navbar-item--has-notify:hover .header__notify {
     display: block;
 }
 
@@ -134,6 +139,42 @@
     width: 404px;
     border: 1px solid #D3D3D3;
     background-color: var(--white-color);
+    cursor: default; /*bỏ bàn tay ở thông báo mới nhận*/
+    transform-origin: calc(100% - 20px) top; /*tâm rộng ra và dịch chuyển*/
+    animation: headerNotifyGrowth ease-in 0.3s;
+    display: none;
+}
+
+.header__notify::before {
+    content: ""; /*element*/
+    border-width: 20px 27px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 4px;
+    top: -29px;
+}
+
+.header__notify::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0%;
+    top: -16px;
+    width: 90px;
+    height: 20px;
+    /* background-color: red; */
+}
+
+ @keyframes headerNotifyGrowth {
+     from {
+         opacity: 0; /*mờ dần và hiện lên*/
+         transform: scale(0); /*phóng to thu nhỏ*/
+     }
+     to {
+         opacity: 1;
+         transform: scale(1);
+     }
  }
 
 .header__notify-header {
@@ -147,7 +188,9 @@
     font-weight: 400; 
     font-size: 1.4rem;
     line-height: 40px;
-
+    /* cursor: text;con trỏ chuột dạng text */
+    user-select: none; /*ko cho ngườI dùng copy*/
+    
 }
 
 .header__notify-list {
@@ -188,8 +231,9 @@
 .header__notify-name {
     display: block;
     font-size: 1.4rem;
-    color: var(--black-color);
+    color: var(--text-color);
     font-weight: 400;
+    line-height: 1.8rem;
 }
 
 .header__notify-descriotion {
@@ -197,14 +241,21 @@
     font-size: 1.2rem;
     line-height: 1.6rem;
     color: #756F6E;
+    margin-top: 4px;
 }
 
 .header__notify-footer {
-    text-align: center; /*căn giữa*/
+    /* text-align: center; căn giữa */
+    display: flex;
 }
 
 .header__notify-footer-btn {
     text-decoration: none;
     color: var(--text-color);
-    padding: 16px 16px;
+    padding: 8px 0px;
+    width: 100%;
+    /* margin: auto; */
+    font-size: 1.4rem;
+    font-weight: 400;/*tăng độ đậm chữ đã xem*/
+    text-align: center;
 }
