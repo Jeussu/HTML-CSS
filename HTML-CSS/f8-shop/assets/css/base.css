@@ -3,6 +3,7 @@
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
+    --border-color: #dbdbdb;
 }
 
 *{ /*apply phần tử css*/
@@ -49,3 +50,46 @@ html {
         opacity: 1;
     }
 } /*hiệu ứng hiện dần*/
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+}
+
+.modal__overlay {
+    position: absolute; /*con modal*/
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__body {
+    background-color: var(--white-color);
+    margin: auto;
+    position: relative;
+    z-index: 1; /*nằm trên,nằm dưới theo giá trị*/
+    border-radius: 5px;
+}
+
+/* button style */
+.btn {
+    min-width: 142px;
+    height: 36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0;
+    /* display: flex;
+    align-items: center; */
+}
+
+.btn.btn--primary { /*1 element có 2 class*/
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}

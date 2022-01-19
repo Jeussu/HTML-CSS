@@ -141,7 +141,8 @@
     background-color: var(--white-color);
     cursor: default; /*bỏ bàn tay ở thông báo mới nhận*/
     transform-origin: calc(100% - 20px) top; /*tâm rộng ra và dịch chuyển*/
-    animation: headerNotifyGrowth ease-in 0.3s;
+    animation: headerNotifyGrowth ease-in 0.3s;    
+    will-change: opacity, transform; /*sẽ tối ưu chuyển động*/
     display: none;
 }
 
@@ -259,3 +260,73 @@
     font-weight: 400;/*tăng độ đậm chữ đã xem*/
     text-align: center;
 }
+
+/* authen modal */
+
+.auth-form {
+    width: 500px;
+}
+
+.auth-form__container {
+    padding: 0 32px; /*khoảng cách tới mép*/
+}
+
+.auth-form__header {
+    display: flex;
+    align-items: center; /*ngang nhau*/
+    justify-content: space-between;
+}
+
+.auth-form__heading {
+    font-size: 2.2rem;
+    font-weight: 400;/*chữ đậm*/
+    color: var(--text-color);
+}
+
+.auth-form__switch-btn{
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* .auth-form__form {
+    
+} */
+
+.auth-form__input {
+    width: 100%;
+    height: 40px;
+    margin-top: 16px; /*khoảng cách giữa các thẻ input*/
+    padding: 0 12px;
+    font-size: 1.4rem;
+    border-radius: 2px;
+    border: 1px solid var(--border-color);
+    outline: none; /*bỏ outline khi click chuột vào*/
+}
+
+.auth-form__input:focus { /**/
+border-color: #888;
+}
+
+.auth-form__aside {
+    margin-top: 18px;
+}
+
+.auth-form__policy-text {
+    font-size: 1.2rem;
+    line-height: 1.8rem;/*độ cao chữ*/
+    text-align: center;
+    padding: 0 12px;
+}
+
+.auth-form__text-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.auth-form__controls {
+    margin-top: 80px;
+}
+
+
