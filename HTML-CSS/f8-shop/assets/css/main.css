@@ -425,10 +425,58 @@ border-color: #888;
     text-align: center;
 }
 
+.header__cart-wrap{
+    position: relative;
+    display: inline-block;
+    padding: 0 12px;
+    cursor: pointer;
+}
+
 .header__cart-icon{
     font-size: 2.4rem;
     color: var(--white-color);
     margin-top: 6px;
+}
+
+.header__cart-wrap:hover .header__cart-list {
+    display: block;
+}
+
+.header__cart-list{
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 1px;
+    background-color: var(--white-color);
+    width: 400px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3.125rem 0 rgba(0, 0, 0, 0.2);
+    display: none;
+    animation: fadeIn ease-in 0.2s;/*hiện lên từ từ*/
+}
+
+.header__cart-list::after { /*icon mũi nhọn lên trên*/
+    content: "";
+    position: absolute;
+    right: 3px;
+    top: -26px;
+    border-width: 16px 20px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+}
+
+.header__cart-list--no-cart{
+    padding: 24px 0;
+}
+
+.header__cart-no-cart-img{
+    width: 54%;
+}
+
+.header__cart-list-no-cart-msg{
+    display: block;
+    font-size: 1.4rem;
+    margin-top: 14px;/*dịch chữ xuống dưới*/
+    color: var(--text-color);
 }
 
 .header__search-input-wrap {
@@ -436,6 +484,8 @@ border-color: #888;
     height: 100%;
     position: relative;
 }
+
+
 
 .header__search-input{
     width: 100%;
@@ -603,4 +653,5 @@ border-color: #888;
     font-size: 1.4rem;
     line-height: 38px;
     color: var(--text-color);   
+    display: block;/*hiện bàn tay tất cả*/
 }
