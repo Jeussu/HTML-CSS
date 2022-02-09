@@ -36,7 +36,7 @@
 }
 
 .header__navbar-user-name{
-    margin-left: 8px;
+    margin-left: 4px;
     font-size: 1.4rem;
     font-weight: 400;
 }
@@ -79,8 +79,10 @@
     height: 8px;
 }
 
-.header__navbar-user-item{
 
+
+.header__navbar-user-item--separate{
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /*tạo điểm nhẫn vạch ngăn*/
 }
 
 .header__navbar-user-item a {
@@ -117,7 +119,7 @@
 .header__navbar-item,
 .header__navbar-item-link {
     display: inline-block; /*giữ lại tính chất khối và nằm ngang trên cùng một hàng*/
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--white-color);
     text-decoration: none; /*bỏ gạch chân*/
     font-weight: 300;
@@ -156,6 +158,10 @@
 .header__navbar-icon-link {
     color: var(--white-color); /*phủ màu trắng 2 icons*/
     text-decoration: none;
+}
+
+.header__navbar-icon-link:nth-child(2){
+    margin-left: 3px;
 }
 
 .header__navbar-icon {
@@ -218,13 +224,15 @@
 
  .header__notify {
     position: absolute;
+    z-index: 1;
     top: 118%;
     right: 0%;
     width: 404px;
-    border: 1px solid #D3D3D3;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: var(--white-color);
     cursor: default; /*bỏ bàn tay ở thông báo mới nhận*/
-    transform-origin: calc(100% - 20px) top; /*tâm rộng ra và dịch chuyển*/
+    transform-origin: calc(100% - 32px) top; /*tâm rộng ra và dịch chuyển*/
     animation: headerNotifyGrowth ease-in 0.3s;    
     will-change: opacity, transform; /*sẽ tối ưu chuyển động*/
     display: none;
@@ -483,11 +491,16 @@ border-color: #888;
     height: var(--header-with-search-height);
     display: flex;
     align-items: center;
-    margin: 0 8px;
+    margin: 15px 8px; /*sửa nè*/
 }
 
 .header__logo{
     width: 200px;
+}
+
+.header__logo-link{
+    color: transparent;
+    text-decoration: none;/*trách hiện ra tình trạng gạch chân*/
 }
 
 .header__logo-img{
@@ -502,10 +515,12 @@ border-color: #888;
     background-color: var(--white-color);
     display: flex;
     align-items: center;
+    margin-top: auto;/*sửa nè*/
 }
 
 .header__cart{
     width: 150px;
+    margin-top: 10px; /*sửa nè*/
     text-align: center;
 }
 
@@ -748,7 +763,7 @@ border-color: #888;
 .header__search-option{
     position: absolute;
     right: 0;/*dính liền*/
-    top: 100%;
+    top: calc(100% + 3px);
     width: 130px;
     list-style: none;/*ân dấu gạch chấm*/
     box-shadow: 0 1px 2px #c0c0c0;/*hiệu ứng bóng đổ*/
