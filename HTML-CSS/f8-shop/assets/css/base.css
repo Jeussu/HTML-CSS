@@ -45,18 +45,31 @@ html {
     width: 100%;
 }
 
-.grid_row {
+.grid__row {
     display: flex;
     flex-wrap: wrap; /*những thẻ nằm trong class nằm cùng trong 1 hàng ngang, và bị nhảy xuống khi quá nhiều*/
+    margin-left: -12px;
+    margin-right: -12px;
 }
 
 /* p {
     font-size: 1.6rem; 1rem=16px
 } */
 
+/* Test */
+.grid__column-2{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.6667%;
+}
+
+.grid__column-10{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.3334%;
+}
+
 /* Animatiton */
-
-
 @keyframes fadeIn {
     from {
         opacity: 0;
