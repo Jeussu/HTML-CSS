@@ -879,6 +879,10 @@ border-color: #888;
     background-color: #F5F5F5;
 }
 
+.app__content {
+    padding-top: 36px;
+}
+
 .category{
     border-radius: 2px;
     background-color: var(--white-color);
@@ -888,6 +892,7 @@ border-color: #888;
     color: var(--text-color);
     font-size: 1.7rem;
     padding: 12px 16px;
+    margin-top: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -904,9 +909,7 @@ border-color: #888;
     margin-left: 9px;/*đẩy chữ thẳng với icon*/
 }
 
-.category-item{
 
-}
 
 .category-item--active .category-item__link {
     color: var(--primary-color);
@@ -937,3 +940,5 @@ border-color: #888;
     right: -4px;/*chuyển động từ 0 đến -4*/
     color: var(--primary-color);
 }
+
+/* Home sort + filter */
