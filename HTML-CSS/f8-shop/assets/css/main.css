@@ -1028,7 +1028,7 @@ border-color: #888;
     color: var(--text-color);
     line-height: 1.8rem;
     height: 3.6rem;
-    margin: 10px;
+    margin: 10px 10px 6px;
     overflow: hidden; /*khi đối tượng con nằm chòi ra khỏi đối tượng cha thì chúng ta sẽ ẩn nó đi bằng hidden*/
     display: block;
     display: -webkit-box;
@@ -1038,39 +1038,80 @@ border-color: #888;
 }
 
 .home-product-item__price {
-
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;/*ngăn ko cho giá nhảy ra ngoài*/
 }
 
 .home-product-item__price-old {
-
+    margin-left: 10px;
+    font-size: 1.4rem;
+    color: #666;
+    text-decoration: line-through;/*gạch bỏ chữ*/
 }
 
 .home-product-item__price-current {
-
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-left: 10px;
 }
 
 .home-product-item__action {
-
+    display: flex;
+    justify-content: space-between;/*đẩy 2 thằng ra mép*/
+    margin: 6px 10px 0;
 }
 
 .home-product-item__like {
+    font-size: 1.3rem;
+}
 
+i.home-product-item__like-icon-fill {
+    color: #f63d30;
+    display: none;
+}
+
+.home-product-item__like--liked .home-product-item__like-icon-fill {
+    display: inline-block;
+}
+
+.home-product-item__like--liked .home-product-item__like-icon-empty {
+    display: none;
 }
 
 .home-product-item__rating {
+    font-size: 1rem;
+    /* zoom: 1;thu nhỏ phóng to */
+    transform: scale(0.8);
+    transform-origin: right;
+    color: #D5D5D5;
+    margin: -1px 0 0 auto;
+}
 
+.home-product-item__star--gold {
+    color: var(--star-gold-color);
+}
+
+.home-product-item__sold {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-left: 6px;
 }
 
 .home-product-item__origin {
-
+    display: flex;
+    margin: 3px 10px 0; 
+    color: #595959;
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 
 .home-product-item__brand {
-
+    
 }
 
 .home-product-item__origin-name {
-
+    margin-left: auto;
 }
 
 .home-product-item__favourite {
